@@ -25,7 +25,7 @@ const { NotImplementedError } = require('../extensions/index.js');
   let finalArray = [];
   for (let i = 0; i < newArray.length; i++) {
     finalArray.push(newArray[i].trim().toUpperCase());
-    newArray.sort()
+    finalArray.sort()
   }
   for (let i = 0; i < finalArray.length; i++) {
   result += finalArray[i][0];
