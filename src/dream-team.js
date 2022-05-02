@@ -22,17 +22,18 @@ const { NotImplementedError } = require('../extensions/index.js');
 }
   }
   let result = '';
+  let finalArray = [];
   for (let i = 0; i < newArray.length; i++) {
-    newArray[i].trim();
-    newArray[i].toUpperCase();
+    finalArray.push(newArray[i].trim().toUpperCase());
+    newArray.sort()
   }
-  for (let i = 0; i < newArray.length; i++) {
-  newArray.sort()
-  result += newArray[i][0];
+  for (let i = 0; i < finalArray.length; i++) {
+  result += finalArray[i][0];
   }
   if (result === '') {
     return false
   } else {
+    console.log(result)
     return result
   }
 }
