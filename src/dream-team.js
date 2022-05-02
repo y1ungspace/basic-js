@@ -24,9 +24,15 @@ const { NotImplementedError } = require('../extensions/index.js');
   let result = '';
   newArray.sort()
   for (let i = 0; i < newArray.length; i++) {
+    newArray[i].trim();
+    newArray.toUpperCase();
     result += newArray[i][0];
   }
-  return result
+  if (result === '') {
+    return false
+  } else {
+    return result
+  }
 }
 
 module.exports = {
